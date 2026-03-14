@@ -14,3 +14,5 @@ OUTPUT_WIDTH = 960
 OUTPUT_HEIGHT = 540
 VIDEO_PATH = "../assets/videos/Traffic_video_1.mp4"
 OUTPUT_VIDEO_PATH = "../assets/videos/output_video.mp4"
+TRACKER_MODEL = "yolo11m.pt"
+HELMET_MODEL_PATH = "models/yolo/best.pt"

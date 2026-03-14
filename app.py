@@ -1,8 +1,12 @@
 from src.ingestion.video_reader import VideoReader, OutputVideoWriter
 from src.preprocessing.frame_transform import transform_frame
 from src.config import FRAME_SKIP
+from src.inference.detector import PersonMotorcycleTracker
 
+
+detector = PersonMotorcycleTracker()
 reader = VideoReader()
+
 with reader:
     writer = OutputVideoWriter()
     writer.open_writer(fps=reader.get_fps())
@@ -18,7 +22,11 @@ with reader:
             continue
 
         # ... resize, detect, annotate ...
-        annotated_frame = transform_frame(frame)
+        frame = transform_frame(frame)
+        results = detector.track(frame)
 
-        writer.write_frame(annotated_frame)
-        writer.release()
+        # TODO: pass results to postprocess + drawing
+        # annotated_frame = ...
+
+        # writer.write_frame(frame)
+        # writer.release()
