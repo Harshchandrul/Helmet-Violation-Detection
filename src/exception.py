@@ -1,7 +1,7 @@
 import sys
 
 # Sys library is responsible for handling all the exceptions occured in the running of the code as it has all the data and information related to the exceptions raised
-from Src.logger import logging
+from src.logger import logging
 
 
 # this error detail param we will get from sys
