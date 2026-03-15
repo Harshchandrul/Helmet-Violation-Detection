@@ -1,8 +1,6 @@
 pandas
 numpy
-seaborn
 ultralytics
-roboflow
 
 
 -e .
