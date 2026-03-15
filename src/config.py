@@ -2,19 +2,15 @@
 
 
 DATA_PATH = "data/dataset.yaml"
-# i have to put the model in the model folder so that i can use it later for inference and training.
-MODEL_PATH = "models/yolov8n.pt"
 OVERLAP_THRESHOLD = 0.2
 FRAME_SKIP = 5
 N_FRAMES = 5
 RIDER_TIMEOUT = 3
 EARLY_FRAMES = 3
-FRAME_SKIP = 5
-OUTPUT_WIDTH = 960
-OUTPUT_HEIGHT = 540
-VIDEO_PATH = "../assets/videos/Traffic_video_1.mp4"
-OUTPUT_VIDEO_PATH = "../assets/videos/output_video.mp4"
+OUTPUT_WIDTH = 1920
+OUTPUT_HEIGHT = 1080
+VIDEO_PATH = "assets/videos/Traffic_video_1.mp4"
+OUTPUT_VIDEO_PATH = "assets/videos/output_video.mp4"
 TRACKER_MODEL = "yolo11m.pt"
 HELMET_MODEL_PATH = "models/yolo/best.pt"
 RIDER_COAST_FRAMES = 60
-N_FRAMES = 4

@@ -1,3 +1,5 @@
+
+
 def run(video_path=None, output_path=None):
 
     from src.ingestion.video_reader import VideoReader, OutputVideoWriter
@@ -5,9 +7,14 @@ def run(video_path=None, output_path=None):
     from src.config import FRAME_SKIP
     from src.inference.detector import PersonMotorcycleTracker
     from src.inference.postprocess import RiderHelmetPostProcessor
+    import os
 
+    # Project root = directory containing application.py / app.py
+    root = os.path.dirname(os.path.abspath(__file__))
+    video_path = os.path.join(root, "assets", "videos", "Traffic_video_1.mp4")
+    # Then pass to VideoReader:
+    reader = VideoReader(video_path=video_path)
     detector = PersonMotorcycleTracker()
-    reader = VideoReader()
     postprocessor = RiderHelmetPostProcessor()
 
     with reader:
